@@ -11,6 +11,8 @@ currentFont = []
 //% block="draw font text $text x $X y $Y background $colorBG foreground $colorFG output image $output"
 //% inlineInputMode=inline
 //% output.shadow=screen_image_picker
+//% colorBG.shadow=colorindexpicker
+//% colorFG.shadow=colorindexpicker
 export function drawFont (text: string, X: number, Y: number, colorBG: number, colorFG: number, output: Image) {
     tempImage = image.create(cW * text.length, cH)
     for (let index = 0; index <= text.length - 1; index++) {
