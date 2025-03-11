@@ -19,12 +19,12 @@ export function drawFont (text: string, X: number, Y: number, colorBG: number, c
     }
     for (let x1 = 0; x1 < tempImage.width; x1++) {
         for (let y1=0; y1<tempImage.height; y1++){            
-            if (tempImage.getPixel(x1, y1)==15) {                
-                tempImage.setPixel(x1, y1, colorBG)
-            }
             if (tempImage.getPixel(x1, y1) == 1) {
                 tempImage.setPixel(x1, y1, colorFG)
+            } else{
+                tempImage.setPixel(x1, y1, colorBG)
             }
+
         }
     }
     //tempImage.replace(1, colorFG)
