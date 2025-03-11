@@ -8,7 +8,7 @@ let cW = 0
 let tempImage: Image = null
 let currentFont: Image[] = []
 currentFont = []
-//% block="draw font text $text x $X y $y background $colorBG foreground $colorFG output image $output"
+//% block="draw font text $text x $X y $Y background $colorBG foreground $colorFG output image $output"
 //% inlineInputMode=inline
 //% output.shadow=screen_image_picker
 export function drawFont (text: string, X: number, Y: number, colorBG: number, colorFG: number, output: Image) {
