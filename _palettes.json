@@ -1,0 +1,28 @@
+{
+    "nextPaletteID": 1,
+    "palettes": {
+        "custom0": {
+            "id": "custom0",
+            "name": "MMTec VP1 Palette",
+            "colors": [
+                "#000000",
+                "#000000",
+                "#131384",
+                "#841313",
+                "#BD2E1B",
+                "#555555",
+                "#138413",
+                "#7A70DA",
+                "#CF7925",
+                "#D870DA",
+                "#AAAAAA",
+                "#80D456",
+                "#6AD7D8",
+                "#E5C587",
+                "#EFE879",
+                "#FFFFFF"
+            ],
+            "custom": true
+        }
+    }
+}
