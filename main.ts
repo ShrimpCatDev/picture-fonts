@@ -22,15 +22,15 @@ export function drawFont (text: string, X: number, Y: number, colorBG: number, c
     tempImage.replace(15, colorBG)
     spriteutils.drawTransparentImage(tempImage, output, X, Y)
 }
-//% block="set font image $fontImg char width $charWidth height $charHeight image width $imageWidth image height $imageHeight font text $fontText"
+//% block="set font image $fontImg char width $charWidth height $charHeight font text $fontText"
 //% fontImg.shadow=screen_image_picker
 //% inlineInputMode=inline
 export function importFont (fontImg: Image, charWidth: number, charHeight: number, imageWidth: number, imageHeight: number, fontText: string) {
     fontChars = fontText
     cW = charWidth
     cH = charHeight
-    for (let y = 0; y <= imageHeight / charHeight - 1; y++) {
-        for (let x = 0; x <= imageWidth / charWidth - 1; x++) {
+    for (let y = 0; y <= fontImg.height / charHeight - 1; y++) {
+        for (let x = 0; x <= fontImg.width / charWidth - 1; x++) {
             currentFont.push(image.create(charWidth, charHeight))
             advancedBlocks.blit(currentFont[currentFont.length - 1], 0, 0, charWidth, charHeight, fontImg, x * charWidth, y * charHeight, charWidth, charHeight)
         }
