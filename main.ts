@@ -1,6 +1,5 @@
-
-
 //% color="#88af92"
+//% inlineInputMode=inline
 namespace pictureFonts {
 let fontChars = ""
 let cH = 0
@@ -9,7 +8,7 @@ let tempImage: Image = null
 let currentFont: Image[] = []
 currentFont = []
 //% block="draw font text $text x $X y $y background $colorBG foreground $colorFG output image $output"
-//% inLineInputMode=inline
+//% inlineInputMode=inline
 export function drawFont (text: string, X: number, Y: number, colorBG: number, colorFG: number, output: Image) {
     tempImage = image.create(cW * text.length, cH)
     for (let index = 0; index <= text.length - 1; index++) {
@@ -20,7 +19,8 @@ export function drawFont (text: string, X: number, Y: number, colorBG: number, c
     spriteutils.drawTransparentImage(tempImage, output, X, Y)
 }
 //% block="set font image $image char width $charWidth height $charHeight image width $imageWidth image height $imageHeight font text $fontText"
-//% inLineInputMode=inline
+//% fontImg.shadow=screen_image_picker
+//% inlineInputMode=inline
 export function importFont (fontImg: Image, charWidth: number, charHeight: number, imageWidth: number, imageHeight: number, fontText: string) {
     fontChars = fontText
     cW = charWidth
