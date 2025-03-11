@@ -1,6 +1,5 @@
 //% color="#88af92"
 //% inlineInputMode=inline
-
 namespace pictureFonts {
 let fontChars = ""
 let cH = 0
@@ -18,14 +17,25 @@ export function drawFont (text: string, X: number, Y: number, colorBG: number, c
     for (let index = 0; index <= text.length - 1; index++) {
         spriteutils.drawTransparentImage(currentFont[fontChars.indexOf(text.charAt(index))], tempImage, index * 8, 0)
     }
-    tempImage.replace(1, colorFG)
-    tempImage.replace(15, colorBG)
+    for (let x1 = 0; x1 < tempImage.width; x1++) {
+        for (let y1=0; y1<tempImage.height; y1++){            
+            if (tempImage.getPixel(x1, y1)==15) {                
+                tempImage.setPixel(x1, y1, colorBG)
+            }
+            if (tempImage.getPixel(x1, y1) == 1) {
+                tempImage.setPixel(x1, y1, colorFG)
+            }
+        }
+    }
+    //tempImage.replace(1, colorFG)
+    //tempImage.replace(15, colorBG)
     spriteutils.drawTransparentImage(tempImage, output, X, Y)
 }
 //% block="set font image $fontImg char width $charWidth height $charHeight font text $fontText"
 //% fontImg.shadow=screen_image_picker
 //% inlineInputMode=inline
 export function importFont (fontImg: Image, charWidth: number, charHeight: number, fontText: string) {
+    fontImg.replace(15, 0)
     fontChars = fontText
     cW = charWidth
     cH = charHeight
