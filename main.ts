@@ -25,7 +25,7 @@ export function drawFont (text: string, X: number, Y: number, colorBG: number, c
 //% block="set font image $fontImg char width $charWidth height $charHeight font text $fontText"
 //% fontImg.shadow=screen_image_picker
 //% inlineInputMode=inline
-export function importFont (fontImg: Image, charWidth: number, charHeight: number, imageWidth: number, imageHeight: number, fontText: string) {
+export function importFont (fontImg: Image, charWidth: number, charHeight: number, fontText: string) {
     fontChars = fontText
     cW = charWidth
     cH = charHeight
