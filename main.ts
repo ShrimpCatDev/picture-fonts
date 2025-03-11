@@ -1,5 +1,6 @@
 //% color="#88af92"
 //% inlineInputMode=inline
+//% fontImg.shadow=screen_image_picker
 namespace pictureFonts {
 let fontChars = ""
 let cH = 0
